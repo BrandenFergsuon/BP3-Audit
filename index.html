@@ -781,15 +781,7 @@
 
             move();
             
-            // Automatically populate the "Before Accepting Cookies" textarea with all cookies
-            const beforeTextarea = document.getElementById('before-cookies');
-            let allCookiesText = '';
-            cookieDatabase.forEach(cookie => {
-                allCookiesText += `${cookie.name}\t${cookie.domain}\n`;
-            });
-            beforeTextarea.value = allCookiesText.trim();
-            
-            // Automatically populate the cookie details table with all cookies
+            // Populate the cookie details table with all cookies
             populateCookieDetailsTable(cookieDatabase);
         });
 
